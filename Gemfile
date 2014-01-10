@@ -16,6 +16,8 @@ gem 'rake'
 # Component requirements
 gem 'haml'
 
+gem "rubysl", "~> 2.0", platform: :rbx
+
 # Test requirements
 gem 'rspec', :group => 'test'
 gem 'rack-test', :require => 'rack/test', :group => 'test'
