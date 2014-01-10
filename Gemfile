@@ -18,6 +18,8 @@ gem 'haml'
 
 gem "rubysl", "~> 2.0", platform: :rbx
 
+gem 'mail-gpg', '0.1.2'
+
 # Test requirements
 gem 'rspec', :group => 'test'
 gem 'rack-test', :require => 'rack/test', :group => 'test'
