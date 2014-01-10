@@ -1,9 +1,11 @@
 PADRINO_ENV = 'test' unless defined?(PADRINO_ENV)
 require File.expand_path(File.dirname(__FILE__) + "/../config/boot")
 
-RSpec.configure do |conf|
-  conf.include Rack::Test::Methods
+RSpec.configure do |config|
+  config.include Rack::Test::Methods
+  config.expect_with(:rspec) { |c| c.syntax = :expect }
 end
+
 
 # You can use this method to custom specify a Rack app
 # you want rack-test to invoke:
