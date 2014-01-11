@@ -1,0 +1,6 @@
+=form_for @ivy_mail, '/mailbox' do |f|
+  =f.error_messages
+  =f.label :subject
+  =f.text_field :subject
+
+  =f.submit
