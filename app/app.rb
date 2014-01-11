@@ -46,6 +46,10 @@ module Ivybox
     #   end
     #
 
+    configure :test do
+      set :delivery_method, :test
+    end
+
     ##
     # You can manage errors like:
     #
