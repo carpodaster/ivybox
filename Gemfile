@@ -19,10 +19,13 @@ gem 'haml'
 gem "rubysl", "~> 2.0", platform: :rbx
 
 gem 'mail-gpg', '0.1.2'
+gem 'activemodel', require: 'active_model'
 
 # Test requirements
-gem 'rspec', :group => 'test'
-gem 'rack-test', :require => 'rack/test', :group => 'test'
+group :test do
+  gem 'rspec'
+  gem 'rack-test', require: 'rack/test'
+end
 
 # Padrino Stable Gem
 gem 'padrino', '0.11.4'

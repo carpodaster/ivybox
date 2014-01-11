@@ -34,4 +34,20 @@ describe IvyMail do
     end
   end
 
+  context 'with validations' do
+    before { subject.valid? }
+
+    it 'requires a subject' do
+      expect(subject.errors[:subject]).to be_present
+    end
+
+    it 'requires a message' do
+      expect(subject.errors[:message]).to be_present
+    end
+
+    it 'requires at least one recipient' do
+      expect(subject.errors[:recipients]).to be_present
+    end
+  end
+
 end
