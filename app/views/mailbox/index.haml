@@ -1,6 +1,35 @@
-=form_for @ivy_mail, '/mailbox' do |f|
-  =f.error_messages
-  =f.label :subject
-  =f.text_field :subject
+.page-header
+  %h1 New encrypted message
 
-  =f.submit
+=form_for @ivy_mail, '/mailbox', { class: 'form-horizontal', role: 'form' } do |f|
+  =f.error_messages
+  %fieldset
+    .form-group
+      =f.label :from, class: 'control-label col-sm-1'
+      .col-sm-4
+        =f.text_field :from, class: 'form-control'
+
+  %fieldset
+    .form-group
+      =f.label :recipient, class: 'control-label col-sm-1'
+      .col-sm-4
+        =f.text_field :recipient, class: 'form-control'
+
+  %fieldset
+    .form-group
+      =f.label :subject, class: 'control-label col-sm-1'
+      .col-sm-4
+        =f.text_field :subject, class: 'form-control'
+
+  %fieldset
+    .form-group
+      =f.label :message, class: 'control-label col-sm-1'
+      .col-sm-4
+        =f.text_area :message, rows: 8, class: 'form-control'
+
+  .line-seperator
+
+  .fieldset
+    .form-group
+      .col-sm-offset-1.col-sm-4
+        =f.submit 'Send', class: 'btn btn-default'
