@@ -16,9 +16,15 @@ class IvyMail
     @recipients ||= []
   end
 
+  def recipient
+    recipients.first
+  end
+
   def recipients=(*args)
     @recipients = args
   end
+
+  alias :recipient= :recipients=
 
   private
 

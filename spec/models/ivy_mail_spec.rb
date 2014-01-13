@@ -32,6 +32,25 @@ describe IvyMail do
         expect(subject.recipients).to eql ['foo@example.com']
       end
     end
+
+    describe '#recipient' do
+      it 'returns nil if recipients is empty' do
+        subject.stub(recipients: [])
+        expect(subject.recipient).to be_nil
+      end
+
+      it 'returns the first element of recipients' do
+        subject.stub(recipients: %w(foo bar))
+        expect(subject.recipient).to eql 'foo'
+      end
+    end
+
+    describe '#recipient=' do
+      it 'sets recipients' do
+        subject.recipient = 'Foobar'
+        expect(subject.recipients).to eql %w(Foobar)
+      end
+    end
   end
 
   context 'with validations' do
