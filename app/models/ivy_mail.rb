@@ -3,8 +3,8 @@ class IvyMail
 
   attr_accessor :from, :message, :subject
 
-  validates_presence_of :message, :subject
-  validate :requires_at_least_one_recipient
+  validates :message, :subject, presence: true
+  validate  :requires_at_least_one_recipient
 
   def initialize(attributes = {})
     attributes.each do |attr, val|
