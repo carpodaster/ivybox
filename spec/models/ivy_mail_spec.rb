@@ -60,6 +60,10 @@ describe IvyMail do
       expect(subject.errors[:subject]).to be_present
     end
 
+    it 'requires a recipient' do
+      expect(subject.errors[:recipient]).to be_present
+    end
+
     it 'requires a message' do
       expect(subject.errors[:message]).to be_present
     end

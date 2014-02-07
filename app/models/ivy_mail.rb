@@ -3,7 +3,7 @@ class IvyMail
 
   attr_accessor :from, :message, :subject
 
-  validates :message, :subject, presence: true
+  validates :message, :recipient, :subject, presence: true
   validate  :requires_at_least_one_recipient
 
   def initialize(attributes = {})
