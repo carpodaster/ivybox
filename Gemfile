@@ -28,7 +28,7 @@ group :test do
 end
 
 # Padrino Stable Gem
-gem 'padrino', '0.11.4'
+gem 'padrino', '~> 0.12.5'
 
 # Or Padrino Edge
 # gem 'padrino', :github => 'padrino/padrino-framework'
