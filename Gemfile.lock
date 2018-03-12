@@ -67,7 +67,7 @@ GEM
       activesupport (>= 3.1)
     polyglot (0.3.5)
     rack (1.5.5)
-    rack-protection (1.5.3)
+    rack-protection (1.5.5)
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -309,3 +309,6 @@ DEPENDENCIES
   rake
   rspec
   rubysl (~> 2.0)
+
+BUNDLED WITH
+   1.16.1
